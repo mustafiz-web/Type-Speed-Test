@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Typing Speed Test | Real-time WPM & Accuracy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Theme Toggle -->
+        <div class="theme-toggle" id="themeToggle">
+            <div class="theme-toggle-ball"></div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="title">Typing Speed Test ⌨️</h1>
+
+        <!-- Difficulty Selector -->
+        <div class="difficulty-selector">
+            <button class="difficulty-btn" data-level="easy">Easy</button>
+            <button class="difficulty-btn active" data-level="medium">Medium</button>
+            <button class="difficulty-btn" data-level="hard">Hard</button>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-label">Timer</div>
+                <div class="stat-value" id="timer">00:00</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">WPM</div>
+                <div class="stat-value" id="wpm">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Accuracy</div>
+                <div class="stat-value" id="accuracy">100%</div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Sentence Display -->
+        <div class="sentence-display" id="sentenceDisplay"></div>
+
+        <!-- Typing Input -->
+        <textarea 
+            class="typing-input" 
+            id="typingInput" 
+            placeholder="Click here and start typing..."
+            rows="3"
+        ></textarea>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection">
+            <h2 class="results-title">🎉 Test Complete!</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-label">Final WPM</div>
+                    <div class="result-value" id="finalWpm">0</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Accuracy</div>
+                    <div class="result-value" id="finalAccuracy">0%</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Time Taken</div>
+                    <div class="result-value" id="finalTime">00:00</div>
+                </div>
+            </div>
+            <button class="restart-btn" id="restartBtn">Restart Test 🔄</button>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+            <h3 class="leaderboard-title">🏆 Top 5 Scores</h3>
+            <ul class="leaderboard-list" id="leaderboardList">
+                <li class="leaderboard-item">
+                    <span class="leaderboard-rank">#1</span>
+                    <span>No scores yet</span>
+                    <span class="leaderboard-score">- WPM</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
