@@ -1,5 +1,5 @@
 
-        // Sentences Array by Difficulty
+        
         const sentences = {
             easy: [
                 "The cat sat on the mat.",
@@ -429,4 +429,5 @@
         }
 
         window.addEventListener('load', typeTitle);
+
    
